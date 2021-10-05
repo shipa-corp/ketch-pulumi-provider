@@ -1,0 +1,3 @@
+name: go-job-2
+runtime: go
+description: Creating a Ketch Job in Go

@@ -1,0 +1,3 @@
+name: job-nodejs-1
+runtime: nodejs
+description: Creating a job with Pulumi

@@ -1,0 +1,3 @@
+name: app-nodejs-1
+runtime: nodejs
+description: Deploying an application with Ketch and Pulumi

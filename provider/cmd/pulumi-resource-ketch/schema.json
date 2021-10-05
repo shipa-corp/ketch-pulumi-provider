@@ -1,0 +1,504 @@
+{
+    "name": "ketch",
+    "description": "A Pulumi package for creating and managing ketch resources.",
+    "keywords": [
+        "pulumi",
+        "ketch"
+    ],
+    "homepage": "https://pulumi.io",
+    "license": "Apache-2.0",
+    "attribution": "This Pulumi package is based on the [`ketch` Terraform Provider](https://github.com/terraform-providers/terraform-provider-ketch).",
+    "repository": "https://github.com/brunoa19/ketch-pulumi-provider",
+    "meta": {
+        "moduleFormat": "(.*)(?:/[^/]*)"
+    },
+    "config": {},
+    "types": {
+        "ketch:index/AppApp:AppApp": {
+            "properties": {
+                "cnames": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "framework": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "image": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "ports": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "processes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ketch:index/AppAppProcess:AppAppProcess"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "routingSettings": {
+                    "$ref": "#/types/ketch:index/AppAppRoutingSettings:AppAppRoutingSettings",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "units": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "version": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "framework",
+                "image",
+                "name"
+            ]
+        },
+        "ketch:index/AppAppProcess:AppAppProcess": {
+            "properties": {
+                "cmds": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "ketch:index/AppAppRoutingSettings:AppAppRoutingSettings": {
+            "properties": {
+                "weight": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "ketch:index/FrameworkFramework:FrameworkFramework": {
+            "properties": {
+                "appQuotaLimit": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "ingressController": {
+                    "$ref": "#/types/ketch:index/FrameworkFrameworkIngressController:FrameworkFrameworkIngressController",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "namespace": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "ingressController",
+                "name"
+            ]
+        },
+        "ketch:index/FrameworkFrameworkIngressController:FrameworkFrameworkIngressController": {
+            "properties": {
+                "className": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "clusterIssuer": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "serviceEndpoint": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "className",
+                "serviceEndpoint",
+                "type"
+            ]
+        },
+        "ketch:index/JobJob:JobJob": {
+            "properties": {
+                "backoffLimit": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "completions": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "containers": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/types/ketch:index/JobJobContainer:JobJobContainer"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "description": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "framework": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "parallelism": {
+                    "type": "integer",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "policy": {
+                    "$ref": "#/types/ketch:index/JobJobPolicy:JobJobPolicy",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "suspend": {
+                    "type": "boolean",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "type": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "version": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "framework",
+                "name"
+            ]
+        },
+        "ketch:index/JobJobContainer:JobJobContainer": {
+            "properties": {
+                "commands": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "image": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                },
+                "name": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "commands",
+                "image",
+                "name"
+            ]
+        },
+        "ketch:index/JobJobPolicy:JobJobPolicy": {
+            "properties": {
+                "restartPolicy": {
+                    "type": "string",
+                    "language": {
+                        "python": {
+                            "mapCase": false
+                        }
+                    }
+                }
+            },
+            "type": "object",
+            "required": [
+                "restartPolicy"
+            ]
+        }
+    },
+    "provider": {
+        "description": "The provider type for the ketch package. By default, resources use package-wide configuration\nsettings, however an explicit `Provider` instance may be created and passed during resource\nconstruction to achieve fine-grained programmatic control over provider settings. See the\n[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.\n"
+    },
+    "resources": {
+        "ketch:index/app:App": {
+            "properties": {
+                "app": {
+                    "$ref": "#/types/ketch:index/AppApp:AppApp"
+                }
+            },
+            "required": [
+                "app"
+            ],
+            "inputProperties": {
+                "app": {
+                    "$ref": "#/types/ketch:index/AppApp:AppApp"
+                }
+            },
+            "requiredInputs": [
+                "app"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering App resources.\n",
+                "properties": {
+                    "app": {
+                        "$ref": "#/types/ketch:index/AppApp:AppApp"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "ketch:index/framework:Framework": {
+            "properties": {
+                "framework": {
+                    "$ref": "#/types/ketch:index/FrameworkFramework:FrameworkFramework"
+                }
+            },
+            "required": [
+                "framework"
+            ],
+            "inputProperties": {
+                "framework": {
+                    "$ref": "#/types/ketch:index/FrameworkFramework:FrameworkFramework"
+                }
+            },
+            "requiredInputs": [
+                "framework"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Framework resources.\n",
+                "properties": {
+                    "framework": {
+                        "$ref": "#/types/ketch:index/FrameworkFramework:FrameworkFramework"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "ketch:index/job:Job": {
+            "properties": {
+                "job": {
+                    "$ref": "#/types/ketch:index/JobJob:JobJob"
+                }
+            },
+            "required": [
+                "job"
+            ],
+            "inputProperties": {
+                "job": {
+                    "$ref": "#/types/ketch:index/JobJob:JobJob"
+                }
+            },
+            "requiredInputs": [
+                "job"
+            ],
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Job resources.\n",
+                "properties": {
+                    "job": {
+                        "$ref": "#/types/ketch:index/JobJob:JobJob"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "language": {
+        "csharp": {
+            "compatibility": "tfbridge20",
+            "namespaces": null,
+            "packageReferences": {
+                "Pulumi": "3.*",
+                "System.Collections.Immutable": "1.6.0"
+            }
+        },
+        "go": {
+            "generateResourceContainerTypes": true,
+            "importBasePath": "github.com/brunoa19/ketch-pulumi-provider/sdk/go/ketch"
+        },
+        "nodejs": {
+            "compatibility": "tfbridge20",
+            "dependencies": {
+                "@pulumi/pulumi": "^3.0.0"
+            },
+            "devDependencies": {
+                "@types/mime": "^2.0.0",
+                "@types/node": "^10.0.0"
+            },
+            "disableUnionOutputTypes": true,
+            "packageDescription": "A Pulumi package for creating and managing ketch resources.",
+            "packageName": "",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-ketch)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi/pulumi-ketch` repo](https://github.com/pulumi/pulumi-ketch/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-providers/terraform-provider-ketch` repo](https://github.com/terraform-providers/terraform-provider-ketch/issues).",
+            "typescriptVersion": ""
+        },
+        "python": {
+            "compatibility": "tfbridge20",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-ketch)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi/pulumi-ketch` repo](https://github.com/pulumi/pulumi-ketch/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-providers/terraform-provider-ketch` repo](https://github.com/terraform-providers/terraform-provider-ketch/issues).",
+            "requires": {
+                "pulumi": "\u003e=3.0.0,\u003c4.0.0"
+            }
+        }
+    }
+}
