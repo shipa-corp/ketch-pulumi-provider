@@ -37,4 +37,8 @@ See readme file in python examples
     # run example with pulumi
     cd sdk/examples/app/go
     pulumi up
+    
+## Documentation:
+
+Detailed documentation on how to use this provider is [available here](https://learn.theketch.io/docs/pulumi)
 
